@@ -1,7 +1,3 @@
-//////////////
-// favicon //
-////////////
-
 // Create a link element for the favicon
 const faviconContent = document.createElement('link');
   
