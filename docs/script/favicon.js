@@ -1,10 +1,9 @@
-// Create a link element for the favicon
-const faviconContent = document.createElement('link');
-  
-// Set the attributes for the favicon link element
-faviconContent.rel = 'icon';
-faviconContent.type = 'image/x-icon';
-faviconContent.href = 'https://i.imgur.com/N1YbnPZ.jpg';
-
-// Add the favicon link element to the document's head
-document.head.appendChild(faviconContent);
+<div class="navbar">
+    <div>
+        <!-- Left Icon (e.g., a home icon) -->
+        <span class="navbar-icon"><a href="https://jetsadaWijit.github.io" target="_blank"><img class="img-logo" src="https://i.imgur.com/lAUFnI4.png" alt="logo"></a></span>
+    </div>
+    <div>
+        <span class="navbar-icon"><a href="https://jetsadaWijit.gitlab.io" target="_blank"><img class="img-logo" src="https://i.imgur.com/rgIGxmL.png" alt="logo"></a></span>
+    </div>
+</div>
