@@ -1,4 +1,4 @@
-const header = document.createElement('header');
+const header = document.querySelector('header');
 const nav = document.createElement('nav');
 const link1 = document.createElement('a');
 const link2 = document.createElement('a');
