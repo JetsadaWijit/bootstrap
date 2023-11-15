@@ -80,7 +80,26 @@ header {
     height: 50px;
     width: 50px;
     background-image: url('${linkRepository}');
-}`;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+/* Centering the logo */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adjusting spacing */
+nav > * {
+    margin: 0 20px;
+}`
+;
 
 // Append style to the head
 document.head.appendChild(style);
