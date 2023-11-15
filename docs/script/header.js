@@ -47,7 +47,6 @@ document.body.appendChild(header);
 const style = document.createElement('style');
 style.innerHTML = `
 header {
-    margin-left: 78vh;
     display: flex;
     justify-content: center;
     align-items: center;
