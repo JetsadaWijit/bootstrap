@@ -99,7 +99,7 @@ nav {
 nav > * {
     margin: 0 20px;
 }`
-;*/
+;
 
 // Append style to the head
-document.head.appendChild(style);
+document.head.appendChild(style);*/
