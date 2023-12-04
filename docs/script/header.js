@@ -44,7 +44,7 @@ header.appendChild(nav);
 document.body.appendChild(header);
 
 // Create a style element for CSS
-const style = document.createElement('style');
+/*const style = document.createElement('style');
 style.innerHTML = `
 header {
     margin-left: 77vh;
@@ -88,18 +88,18 @@ nav a {
     font-size: 16px;
 }
 
-/* Centering the logo */
+// Centering the logo
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Adjusting spacing */
+// Adjusting spacing
 nav > * {
     margin: 0 20px;
 }`
-;
+;*/
 
 // Append style to the head
 document.head.appendChild(style);
