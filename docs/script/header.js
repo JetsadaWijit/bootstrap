@@ -44,7 +44,7 @@ header.appendChild(nav);
 document.body.appendChild(header);
 
 // Create a style element for CSS
-/*const style = document.createElement('style');
+const style = document.createElement('style');
 style.innerHTML = `
 header {
     margin-left: 77vh;
@@ -102,4 +102,4 @@ nav > * {
 ;
 
 // Append style to the head
-document.head.appendChild(style);*/
+document.head.appendChild(style);
