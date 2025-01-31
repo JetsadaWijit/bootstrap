@@ -48,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
     top: 0;
     left: 0;
     right: 0;
-    background: white;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
