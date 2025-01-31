@@ -39,24 +39,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Create and append a style element
     const style = document.createElement('style');
     style.innerHTML = `
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-        }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
-        .logo {
-            width: 40px;
-            height: 40px;
-        }
-    `;
+.logo {
+    width: 40px;
+    height: 40px;
+}`;
     document.head.appendChild(style);
 });
