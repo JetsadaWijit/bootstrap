@@ -7,7 +7,6 @@
             },
             "extensions": [
                 "ms-azuretools.vscode-docker",
-                "github.copilot",
                 "alefragnani.bookmarks",
                 "eamodio.gitlens",
                 "streetsidesoftware.code-spell-checker",
