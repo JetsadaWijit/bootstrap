@@ -1,66 +1,62 @@
-// Create a header element
-const header = document.createElement('div');
-header.classList.add('header');
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector('.header');
 
-// Get attribute values from <body> (ensure these attributes exist in the HTML)
-const githubLink = document.body.getAttribute('github-website-link') || "https://jetsadawijit.github.io";
-const gitlabLink = document.body.getAttribute('gitlab-website-link') || "https://jetsadawijit.gitlab.io";
-
-// Create GitHub link with logo
-const link1 = document.createElement('a');
-link1.setAttribute('href', githubLink);
-const githubImg = document.createElement('img');
-githubImg.setAttribute('src', 'https://i.imgur.com/lAUFnI4.png');
-githubImg.setAttribute('alt', 'GitHub Logo');
-githubImg.classList.add('logo');
-link1.appendChild(githubImg);
-
-// Create GitLab link with logo
-const link2 = document.createElement('a');
-link2.setAttribute('href', gitlabLink);
-const gitlabImg = document.createElement('img');
-gitlabImg.setAttribute('src', 'https://i.imgur.com/rgIGxmL.png');
-gitlabImg.setAttribute('alt', 'GitLab Logo');
-gitlabImg.classList.add('logo');
-link2.appendChild(gitlabImg);
-
-// Append links to header
-header.appendChild(link1);
-header.appendChild(link2);
-
-// Append header to the body
-document.body.appendChild(header);
-
-// Create a style element for CSS
-const style = document.createElement('style');
-style.innerHTML = `
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        margin: 0 10px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 1000;
+    if (!header) {
+        console.error("Header element not found!");
+        return;
     }
 
-    .header-container {
-        display: flex;
-        width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
-    }
+    const githubLink = document.createElement('a');
+    const gitlabLink = document.createElement('a');
+    
+    // Get attributes
+    const githubAtt = header.getAttribute('github-website-link');
+    const gitlabAtt = header.getAttribute('gitlab-website-link');
 
-    .logo {
-        width: 40px;
-        height: 40px;
-    }
-`;
+    // Set href attributes
+    if (githubAtt) githubLink.setAttribute('href', githubAtt);
+    if (gitlabAtt) gitlabLink.setAttribute('href', gitlabAtt);
 
-// Append style to the head
-document.head.appendChild(style);
+    // Create images for logos
+    const githubImg = document.createElement('img');
+    githubImg.src = "https://i.imgur.com/lAUFnI4.png";
+    githubImg.alt = "GitHub Logo";
+    githubImg.classList.add("logo");
+
+    const gitlabImg = document.createElement('img');
+    gitlabImg.src = "https://i.imgur.com/rgIGxmL.png";
+    gitlabImg.alt = "GitLab Logo";
+    gitlabImg.classList.add("logo");
+
+    // Append images to links
+    githubLink.appendChild(githubImg);
+    gitlabLink.appendChild(gitlabImg);
+
+    // Append links to header
+    header.appendChild(githubLink);
+    header.appendChild(gitlabLink);
+
+    // Create and append a style element
+    const style = document.createElement('style');
+    style.innerHTML = `
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            width: 40px;
+            height: 40px;
+        }
+    `;
+    document.head.appendChild(style);
+});
